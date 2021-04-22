@@ -1,3 +1,4 @@
+import RegisterForm from "./client/RegisterForm/components/RegisterForm";
 
 function App() {
   return (

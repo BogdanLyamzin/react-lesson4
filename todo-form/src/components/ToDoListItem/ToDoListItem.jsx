@@ -2,12 +2,12 @@ import React from "react";
 
 import styles from "./ToDoListItem.module.css";
 
-const ToDoListItem = ({name, isRead, onClick})=>{
+const ToDoListItem = ({name, isRead, onDelete, onChange})=>{
     return (
-        <li onClick={onClick} className={isRead ? styles.done : ""}>
+        <li  className={isRead ? styles.done : ""}>
             {name}
-            <input type="checkox"/>
-            <span>X</span>
+            <input type="checkbox" checked={isRead ? "checked": ""} onChange={onChange}/>
+            <span onClick={onDelete}>X</span>
         </li>
     )
 }
